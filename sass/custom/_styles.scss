@@ -1,0 +1,200 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+// fonts
+@font-face {
+    font-family: 'fontello';
+    src: url('/font/fontello.eot');
+    src: url('/font/fontello.eot?#iefix') format('embedded-opentype'),
+         url('/font/fontello.woff') format('woff'),
+         url('/font/fontello.ttf') format('truetype'),
+         url('/font/fontello.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// helper classes
+.aligncenter { display: block; margin: 20px auto; text-align: center; }
+.alignleft { float: left; margin: 10px; }
+.alignright { float: right; margin: 10px; }
+.textcenter { text-align: center; }
+.caption { font-size: 0.7em; color: #666; }
+.caption img { margin-bottom: -7px; }
+.screen-reader-text { /* Reusable, toolbox kind of class */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+textarea:focus, input:focus{ outline: none; }
+.hide { display: none; }
+
+// sensible defaults
+ul, ol { margin: 10px 0 15px 2em; }
+blockquote { margin: 30px; }
+body {
+    margin: 0;
+    max-width: inherit;
+}
+
+// header
+body > header {
+	width: 280px;
+	position: fixed;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ccc;
+    background-image: linear-gradient(left , rgb(67,66,66) 15%, rgb(40,40,40) 85%);
+    background-image: -o-linear-gradient(left , rgb(67,66,66) 15%, rgb(40,40,40) 85%);
+    background-image: -moz-linear-gradient(left , rgb(67,66,66) 15%, rgb(40,40,40) 85%);
+    background-image: -webkit-linear-gradient(left , rgb(67,66,66) 15%, rgb(40,40,40) 85%);
+    background-image: -ms-linear-gradient(left , rgb(67,66,66) 15%, rgb(40,40,40) 85%);
+}
+body > header h1 { line-height: 0.8em; }
+body > header a {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+.logo-image:hover #logo-quote {
+    opacity: 1;
+}
+#logo-quote {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    opacity: 0;
+    -webkit-transition: opacity 0.30s ease-in-out;
+    -moz-transition: opacity 0.30s ease-in-out;
+    -ms-transition: opacity 0.30s ease-in-out;
+    -o-transition: opacity 0.30s ease-in-out;
+    transition: opacity 0.30s ease-in-out;
+}
+body > header nav {
+    font-size: 0.6em;
+}
+body > header nav a {
+    padding: 0 5px;
+    font-size: 14px;
+}
+body > header a, body > header a:visited, body > header a:hover {
+    text-decoration: none;
+    color: #ccc;
+}
+body > header a:hover {
+    text-shadow: 0 0 8px rgb(81, 203, 238);
+}
+body > header h1 a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ccc !important;
+}
+body > header .social-media {
+    margin: 0 0 10px;
+}
+body > header .social-media i {
+    font-family: fontello;
+}
+body > header .social-media a {
+    padding: 0 5px;
+    font-size: 20px;
+}
+.icon-twitter:before { content: '\f099'; }
+.icon-gplus:before { content: '\f0d5'; }
+.icon-github:before { content: '\f09b'; }
+.icon-rss:before { content: '\f09e'; }
+.search {
+    background: transparent;
+    border: 2px dashed #666;
+    border-radius: 5px;
+    padding: 6px 8px;
+    color: #ccc;
+    -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+.search:focus, .search:hover {
+    box-shadow: 0 0 8px rgb(81, 203, 238);
+}
+::-webkit-input-placeholder {
+    color:    #666;
+}
+:-moz-placeholder,
+::-moz-placeholder {
+    color:    #666;
+}
+:-ms-input-placeholder {
+    color:    #666;
+}
+
+
+// main body
+#main {
+    margin-left: 280px;
+}
+#content > div {
+    padding-top: 0;
+    max-width: 900px;
+}
+figure.code .highlight {
+    border-radius: 3px;
+    box-shadow: 0 8px 16px -8px #222;
+}
+.archives-link {
+    text-align: right;
+    margin: 30px 0 -20px;
+}
+.archives-link a {
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+// Archives
+#blog-archives h1 {
+    font-size: 1em;
+}
+#blog-archives article {
+    padding-bottom: 0.2em;
+}
+#blog-archives time {
+    top: 17px;
+}
+#blog-archives h2:first-child {
+    padding-top: 19px;
+}
+#blog-archives h2 {
+    top: -5px;
+}
+
+// footer
+body > footer {
+    margin-bottom: 0;
+    border-radius: 0;
+    text-align: center;
+}
+
+// responsive design
+@media (max-width: 767px) {
+    body > header {
+        width: inherit;
+        position: relative;
+        height: 280px;
+        background-image: linear-gradient(top, rgb(67,67,67) 15%, rgb(40,40,41) 85%);
+        background-image: -o-linear-gradient(top, rgb(67,67,67) 15%, rgb(40,40,41) 85%);
+        background-image: -moz-linear-gradient(top, rgb(67,67,67) 15%, rgb(40,40,41) 85%);
+        background-image: -webkit-linear-gradient(top, rgb(67,67,67) 15%, rgb(40,40,41) 85%);
+        background-image: -ms-linear-gradient(top, rgb(67,67,67) 15%, rgb(40,40,41) 85%);
+    }
+    body > header  nav {
+        top: 0;
+    }
+    #main {
+        margin-left: 0;
+        width: 100%;
+    }
+}

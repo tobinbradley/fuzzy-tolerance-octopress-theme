@@ -1,0 +1,49 @@
+<hgroup>
+
+	<!-- Site picture -->
+    <div class="logo-image">
+	   <img src="/images/logo.png" width="122" height="122">
+       <img src="/images/quote.png" width="112" height="28" id="logo-quote">
+    </div>
+
+    <!-- Site title -->
+    <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
+
+    <!-- Main blog links -->
+    <nav>
+        <a href="{{ root_url }}/about/">About</a> &bull;
+        <a href="{{ root_url }}/">Blog</a> &bull;
+        <a href="{{ root_url }}/blog/archives">Archives</a>
+    </nav>
+
+    <!-- social media -->
+    <div class="social-media">
+        <a href="http://twitter.com/fuzzytolerance" rel="social-twitter" title="Twitter">
+            <i class="icon-twitter"></i>
+            <span class="screen-reader-text">Twitter</span>
+        </a>
+        <a href="https://plus.google.com/u/0/102376612885575209658" rel="social-googleplus" title="Google+">
+            <i class="icon-gplus"></i>
+            <span class="screen-reader-text">G+</span>
+        </a>
+        <a href="https://github.com/tobinbradley" rel="social-github" title="GitHub">
+            <i class="icon-github"></i>
+            <span class="screen-reader-text">GitHub</span>
+        </a>
+        <a href="{{ site.subscribe_rss }}" rel="social-rss" title="RSS">
+            <i class="icon-rss"></i>
+            <span class="screen-reader-text">RSS</span>
+        </a>
+    </div>
+
+    <!-- search -->
+    {% if site.simple_search %}
+    <form action="{{ site.simple_search }}" method="get">
+        <fieldset role="search">
+            <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+            <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+    </form>
+    {% endif %}
+
+</hgroup>
